@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "9429",
+      "productName": "libro",
+      "productPrice": 2500,
+      "productCategory": "Beauty",
+      "productStock": 10,
+      "productDescription": "hola",
+      "productImage": null
+    },
+    {
+      "productName": "imagen",
+      "productPrice": 752,
+      "productCategory": "Beauty",
+      "productStock": 1,
+      "productDescription": "hooa",
+      "productImage": "https://www.xamai.com/hubfs/Miniaturas%20junio%20%282%29-3.webp",
+      "id": "d05b"
+    }
+  ]
+}

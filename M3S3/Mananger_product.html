@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mananger Product Manager</title>
+  <link rel="stylesheet" href="jr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="icon.webp">
+</head>
+<body>
+  <div class="appContainer">
+    <header class="appHeader">
+      <div class="headerContent">
+        <h1><i class="fas fa-cubes"></i> Mananger the product</h1>
+        <p>Elevate your inventory management</p>
+      </div>
+    </header>
+
+    <main class="mainContent">
+      <section class="productFormSection">
+        <div class="formCard">
+          <h2><i class="fas fa-edit"></i> Product Form</h2>
+          <form id="productForm">
+            <input type="hidden" id="productId">
+            
+            <div class="formRow">
+              <div class="formGroup">
+                <label for="productName"><i class="fas fa-tag"></i> Product Name</label>
+                <input type="text" id="productName" placeholder="Enter product name" required>
+              </div>
+              
+              <div class="formGroup">
+                <label for="productPrice"><i class="fas fa-dollar-sign"></i> Price</label>
+                <input type="number" id="productPrice" step="0.01" placeholder="0.00" required>
+              </div>
+            </div>
+            
+            <div class="formRow">
+              <div class="formGroup">
+                <label for="productCategory"><i class="fas fa-list"></i> Category</label>
+                <select id="productCategory" required>
+                  <option value="">Select category</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Clothing">Clothing</option>
+                  <option value="Home">Home</option>
+                  <option value="Beauty">Beauty</option>
+                  <option value="Sports">Sports</option>
+                </select>
+              </div>
+              
+              <div class="formGroup">
+                <label for="productStock"><i class="fas fa-boxes"></i> Stock</label>
+                <input type="number" id="productStock" placeholder="Quantity" required>
+              </div>
+            </div>
+            
+            <div class="formGroup">
+              <label for="productImage"><i class="fas fa-image"></i> Image URL</label>
+              <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
+            </div>
+            
+            <div class="formGroup">
+              <label for="productDescription"><i class="fas fa-align-left"></i> Description</label>
+              <textarea id="productDescription" rows="3" placeholder="Product details..."></textarea>
+            </div>
+            
+            <div class="formActions">
+              <button type="submit" id="submitBtn" class="primaryButton">
+                <i class="fas fa-plus"></i> Add Product
+              </button>
+              <button type="button" id="cancelBtn" class="secondaryButton">
+                <i class="fas fa-times"></i> Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="productListSection">
+        <div class="listHeader">
+          <h2><i class="fas fa-list-ul"></i> Product Inventory</h2>
+          <div class="searchBox">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        
+        <div id="notification" class="notification"></div>
+        
+        <div id="productList" class="productGrid">
+          <!-- Products will be loaded here -->
+          <div class="loadingState">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading products...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="appFooter">
+      <p>© 2025 Mananger Product Manager | Built with HTML,Css,JavaScript and Json</p>
+    </footer>
+  </div>
+
+  <script src="gestion_api.js"></script>
+</body>
+</html>
