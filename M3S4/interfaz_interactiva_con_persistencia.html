@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Interactiva con Persistencia</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Interfaz Interactiva con Persistencia</h1>
+    
+    <!-- Paso 1: Formulario para capturar datos -->
+    <form id="userForm">
+        <label for="name" >Nombre:</label> 
+        <input type="text" id="name" placeholder="example: Joel Palacio" required>
+        <div id="nameError" class="error"></div>
+        
+        <label for="age">Edad:</label>
+        <input type="number" id="age" min="1" max="120" placeholder="1-120" required>
+        <div id="ageError" class="error"></div>
+        
+        <button type="button" id="saveBtn">Guardar Datos</button>
+        <button type="button" id="clearBtn">Limpiar Datos</button>
+    </form>
+    
+    <!-- Área para mostrar los datos almacenados -->
+    <div id="output">
+        <h2>Datos Almacenados</h2>
+        <p id="storedData">No hay información almacenada.</p>
+    </div>
+    
+    <!-- Contador de interacciones -->
+    <div>
+        <h3>Interacciones en esta sesión: <span id="counter">0</span></h3>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
